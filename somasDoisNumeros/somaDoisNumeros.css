@@ -1,0 +1,95 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    position: absolute;
+}
+
+
+html {
+    overflow: hidden;
+}
+
+::-webkit-input-placeholder {
+    color: #dfdfdf;
+    font-size: 40pt;
+}
+
+
+#inptA{
+    background: #efefef;
+    position: relative;
+    left: 50px;
+    height: 130px;
+    width: 270px;
+    margin-right: 30px;             
+    font-size: 50pt;
+    text-align: center;            
+    color: #497;
+}
+
+#inptB {
+    background-color: #efefef;
+    position: relative;
+    left: 50px;
+    width: 270px;
+    height: 130px;
+    margin-left: 8px;
+    font-size: 50pt;
+    text-align: center;
+    color: #497;           
+}
+
+#inptC {
+    background-color: #efefef;
+    position: relative;
+    top:220px;
+    left: 50px;
+    width: 370px;
+    height: 130px;
+    margin-left: 8px;
+    font-size: 50pt;
+    text-align: center;
+    color: #46a;
+    cursor: pointer;    
+}
+
+#sinalsoma {
+    position: relative;
+    top: 230px;
+    left:  50px;
+    width: 300px;
+    font-size: 80pt;
+    margin-left: 0px;
+    margin-right: 0px;
+    color: #497;
+}
+
+#sinaleq {
+    position: relative;
+    top: 230px;
+    left:  50px;
+    width: 300px;
+    font-size: 80pt;
+    margin-left: 0px;
+    margin-right: 30px;
+    color: #497;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+#setaeq {
+    position: absolute;
+    top: 20px;
+    left: 704px;
+}
+
+#setareload {
+    position: absolute;
+    top: 360px;
+    left: 1030px;
+}
