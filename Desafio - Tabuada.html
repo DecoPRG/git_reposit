@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Desafio 009 - Tabuada 2</title>
+	
+		<style type="text/css">
+		
+			#num {
+				position: relative;
+				top: 01px;
+				margin-left: 2px;
+				margin-bottom: 1px;
+				text-align: center;
+				font-size: 10pt;
+				border: 3px solid black;
+				width: 58px;
+				height: 24px;
+				font-size: 17pt;
+				
+			}
+			
+			#btn {
+				position: relative;
+				top: 441px;
+				left: 940px;
+				background-color: #FFCC66;
+				border: 2px solid (255,255,255, .2);
+				cursor: pointer;
+				width: 90px;
+				height: 25px;
+				font-size: 9pt;
+				font-weight: 700;
+				font-family: Arial;
+				
+				
+
+			}
+			
+			#quadro {
+				width: 555px;
+				height: 424px;
+				padding-top: 2px;
+				padding-left: 265px;
+				margin-top: 5px;
+				margin-left: 204px;
+				margin-bottom: 15px;
+				background-color: #088826;
+				border: 10px solid #680000;
+				border-bottom: 30px solid #480000;
+			}
+			
+			#frase {
+				margin-left: 205px;
+				font-weight: bold;
+				font-size: 17pt;
+				color: gray;
+			}			
+			
+		</style>
+		
+		<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+		<script type="text/javascript">
+			window.onload = function() {
+
+				let n = document.getElementById("num");
+							
+				n.addEventListener("keydown", function(tecla) {
+					if(tecla.keyCode == 13) {
+						tabuada();
+					}
+				})
+							
+				function tabuada() {
+					if(isNaN(n.value) || n.value == 0 || n.value < 0 || n.value > 9) {
+					
+						n.value = "";
+						alert("Digite apenas números, e que sejam do intervalo de 1 a 9 !");
+						
+					} else if(n.value == "") {
+							alert("Digite um número !");
+							n.value = "";
+					  
+					  }  else if(/^0+\d/.test(n.value)) {
+
+					  		n.value = "";
+							alert("Não use zeros a esquerda do número digitado !");
+							
+					    } else {
+					
+  						  //Altera o atributo usando CORE DOM API
+						  n.setAttribute("disabled", "true");
+						
+					  	  let parag = document.getElementById("exp");
+							
+						  for(y = 0; y <10; y++) {
+							  parag.innerHTML += n.value + "&nbsp &nbsp &nbsp x" + "&nbsp &nbsp &nbsp" + y + "&nbsp &nbsp = &nbsp &nbsp" + n.value*y + "<br/>"; 
+						  }
+						
+						  //Altera o atributo usando HTML DOM API
+						  parag.style.color = "white";
+						  parag.style.fontSize = "19pt";
+						  parag.style.lineHeight = "43px";
+						  parag.style.fontFamily = "Comic Sans MS";
+						  parag.style.fontStyle = "italic";
+					    }
+				}		
+					
+				btn.addEventListener("click", function() {
+					
+					const parag = document.getElementById("exp");
+					location.reload();
+					
+			 	}) 
+
+			//const fundo = getElementById("corpo");
+
+			//fundo.style.bgColor = "black";
+
+			}
+
+
+		
+		</script>
+	
+	</head>
+
+	<body id="corpo">
+	
+		<div>
+			<button id="btn" >APAGADOR</button>
+		</div>
+		
+		<div id="quadro">
+			<span id="exp"></span>
+		</div>
+		
+		<span id="frase">DIGITE um número do intervalo de 1 a 9 e tecle ENTER para ver sua tabuada:</span> <input id="num" />
+		
+	</body>
+
+</html>
+
+
+
+
+
+
+
